@@ -1,0 +1,27 @@
+# SSH Key Setup Automation Script
+
+## Description
+
+This Python script automates the process of setting up password-less SSH authentication for a user on a remote server. It generates SSH keys for the specified user and copies the public key to the remote server to enable password-less login.
+
+## Features
+
+- Generates an SSH key pair for a specified user, if not already present.
+- Copies the public key to the remote server to allow password-less login.
+- Allows logging to a specified log file (or uses a default: `passwordless_ssh_setup.log`).
+- Ensures proper directory permissions for SSH keys.
+- Can be run from any Unix-like system that supports SSH (e.g., Linux, macOS).
+
+## Requirements
+
+- **Python Version**: This script requires Python 3.9 or higher.
+- **OS Compatibility**: Works on Unix-like systems such as Linux and macOS. (Not tested on Windows)
+- **SSH Access**: You need SSH access to the remote server with password authentication enabled initially.
+- **Installed Packages**:
+  - `loguru` for logging: Install it with `pip install loguru`.
+
+## Running the Script
+
+### Command Line Arguments
+
+./passwordless_ssh_auth.py <username> <remote_ip> [--logfile <log_file_name>] [--version]
